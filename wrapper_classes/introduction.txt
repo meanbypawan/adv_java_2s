@@ -1,0 +1,37 @@
+[J2SE + J2EE]:-
+ Wrapper Classes
+ Collection
+
+ Database [RDBMS | MySQL]
+  Basic SQL
+  Nested SQL
+  Joins
+  Mapping
+
+  JDBC Java-Appl + JDBC + Database
+--------------------------------------
+ Web enviornment
+ HTML
+ CSS      -----> Introduction
+ Javascript
+
+ Web Application
+ Client Server Architecture
+
+ Client Application [ReactJs/Angular]
+ Server Application [Python,php,.net,ruby,Java]
+ Database/Storage
+ ------------------------------------
+ Servlet | HTML In Java | Apache Tomcat (Servlet Container)
+ --------------------------------------
+ JSP (Java Server Pages)
+ -------------------------------------
+ MVC [Model-View-Controller]
+-------------------------------------
+API|REST(Respresentational State Transfer) Ful API
+--------------------------------------
+Client <------JSON-------> Server
+R | A               J | P | PHP| Ruby
+JSON
+JSON-parsing
+------------------------------------
