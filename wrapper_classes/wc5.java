@@ -1,6 +1,7 @@
 // Primitive --> Object
 // Object ---> Primitive
 // Primitive ---> String
+// String ------> Primitive
 class TestMain{
     public static void main(String args[]){
         int x = 20;

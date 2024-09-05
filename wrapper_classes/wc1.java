@@ -3,14 +3,14 @@
 
   ---------------------------------------
   Primitive Datatypes:-
-    1. byte ------------->
-    2. short
-    3. int
-    4. long
-    5. float
-    6. double
-    7. char
-    8. boolean:-
+    1. byte ------------->Byte
+    2. short------------> Short
+    3. int ------------->Integer
+    4. long------------> Long
+    5. float----------> Float
+    6. double---------->Double
+    7. char-----------> Character
+    8. boolean:-------> Boolean
        1. 1-bit
        2^1 = 2 [true,false]
        char :- 2^16 ===> 65536
