@@ -1,5 +1,6 @@
 /*
   a. With Type safety [Type Safe]
+     Generic class
   b. Withoud type safety
 
  */

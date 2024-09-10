@@ -2,7 +2,7 @@ import java.util.ArrayList;
 class TestMain{
     public static void main(String args[]){
         // 
-        ArrayList<String> al = new ArrayList<String>(3);
+        ArrayList<String> al = new ArrayList<String>();
         // String al[] = new String[3];
         al.add("A");
         al.add("B");
