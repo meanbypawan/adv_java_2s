@@ -1,0 +1,81 @@
+SQL [Structure Query Language]
+ a. DDL (Data definition language)
+    create,alter,drop,truncate
+ b. DML (Data Manipulation Language)
+    insert,delete,update
+ c. DRL (Data Reteriving Language)
+    select
+ d. TCL (Transaction Control Language)
+     commit, rollback
+ e. DCL(Data Control Language)
+    grant, revoke              
+---------------------------------------------------------------------
+Database ---> Table -----> Record/row/tuple
+Open mysql terminal
+  go to cmd
+  mysql -uroot -proot
+
+ Listing Database
+  show databases;  
+ How to create database in mysql
+  create database ecommercedb;
+ setting current database/ using database
+  use ecommercedb
+-------------------------------------------------------
+Schema
+user(name,contact,age,gender)
+Datatype
+  int,float, tinyInt, char,varchar,text,date,blob,clob.
+How to create table
+Constraint :-
+  Primary key
+  unique key
+  not null
+  default value
+  createIndex
+  check
+  auto_increment
+create table user(
+  id int primary key auto_increment,
+  name varchar(100) not null,
+  contact varchar(10) unique key,
+  age int(3) check(age>=18),
+  gender varchar(6) 
+)   
+Inserting Record
+  insert into user(name,contact,age,gender) values('Kaju','9009111333',17,'male');
+  insert into user values(NULL,'Sontu','9009111444',28,'male')
+insert into user(name,contact,age,gender)
+values('lili','9009111555',27,'female'),
+('leesha','9009111666',24,'female'),
+('neesha','9009111777',23,'female'),
+('cheeku','9009111888',29,'male'),
+('peeku','9009111999',29,'male')
+
+  insert into user(name,contact,age) values('Shantaanu','9009111000',27);
+---------------------------------------------------------------
+CRUD
+ C :- create/insert  :- Average 1 month
+ R :- Reterive/Select : - 100
+ U :- Update :-- Average 4 year
+ D :- Delete :-0
+ -----------------------------
+ select * from user;
+ projection :-
+ select name,age,gender from user;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
