@@ -63,7 +63,171 @@ CRUD
  select * from user;
  projection :-
  select name,age,gender from user;
+-----------------------------------------------------
 
+Filtering record 
+  a. Criteria
+select * from user where age >= 25
+Operation
+  >,>=,<,<=, =, in, between, and , or
+select * from user where age >= 21 and age <=25
+select * from user where age between 21 and 27
+select * from user where age = 21 or age = 27
+select * from user where age in(21,27)
+select * from user where name = 'lili' and age = 27
+select * from user where gender is null  [is not]
+---------------------------------------------------------------------
+Wild card character [Debouncing | Throtlling] 
+java programming  
+%  :- zero or any number of occurance
+_  :--fixed position/ fixed occurance
+
+select * from user where name like '%u'
+select * from user where name like 'k%'
+select * from user where name like '%ee%'
+select * from user where name like '%k_'
+-----------------------------------------------------------
+function
+max(), min(), count(), avg(), sum()
+select count(*) from user
+
+Sorting :-  order by
+select * from user order by age desc limit 5
+select * from user order by age desc limit 5,3 [skip 5 then fetch next 3]
+select max(age) from user;
+
+//select * from user where age = max(age)
+Nested Query/Inner Query
+select * from user where age = (select max(age) from user);
+select * from user where age = (
+  select max(age) from user where age != (
+     select max(age) from user ));
+ select * from user where age =
+ (select max(age) from user where age <
+ (select max(age) from user where age !=
+ (select max(age) from user)))   
+ ---------------------------------------------------------------
+group by
+select count(*) as Total,gender as GENDER from user as u group by gender;
+Aliasing
+----------------------------------------------------------------
+user [city_id]
+city [id,city_name,state_id]
+state [id,state_name,country_id]
+country[id,country_name]	
+-------------------------------------------------------
+Record ----> Multiple Table
+Primary key, Foreign Key
+a. One To One
+   Table A and Table B
+   If a record of Table A is associated with the only one record of table B
+   Ex.
+   User   has one    Cart
+   Cart belongsto User
+   user(id,name)
+   cart(id,userId) ==> userId (Foreign key + unique key + not null)
+   
+b. One To Many
+   If a record Table A is associated with the multple record record table B
+   Category  has-many   Product
+   Product belongsTo Category
+ 
+  Many To Many
+   If record of Table is associated with multiple record of Table B and
+   record of Table B is associated with multple record of Table A
+
+   Cart    hasMany    Product
+   Product belongsToMany Cart
+      Third table
+------------------------------------------------
+User
+City
+State
+Country
+create table country(
+  id int primary key auto_increment,
+  countryName varchar(100));
+create table state(
+  id int primary key auto_increment,
+  stateName varchar(100),
+  countryId int,
+  foreign key(countryId) references country(id))
+create table city(
+  id int primary key auto_increment,
+  cityName varchar(100),
+  stateId int,
+  foreign key(stateId) references state(id))
+---------------------------------------------------------------
+alter table user add(
+cityId int,
+foreign key(cityId) references city(id))
+-----------------------------------------------------
+user( id[pk] ,  name, cityId(FK))
+city( id[pk],cityName, stateId(FK) ) 
+state( id[pk],stateName,countryId(FK) )
+country( id[pk],countryName ) 
+--------------------------------------------------------------------------------
+Parent Table city  ====> delete from city where id = 1
+child table user
+/*
+   delete from user where cityId = 1
+   delete from city where id = 1
+      or
+   delete cascade   
+   
+*/
+insert into country(countryName) values('India','Russia')
+insert into state(stateName,countryId)
+values('MP',1),('MH',1),('GJ',1),('UP',1),('Mosco',2)
+
+insert into city(cityName,stateId)
+values('Indore',1),('Jabalpur',1),('Bhopal',1),
+('Pune',2),('Mumbai',2),('Ahamdabad',3),('Vadodra',3),
+('Noida',4),('Lucknow',4),('Mosco-city',5)
+------------------------------------------------------
+Joins
+ Inner Join :-
+  Table-A  inner join Table-B 
+  Fetch only matched record from both the tables
+ Left outer join
+  Table-A left outer join Table-b
+  Fetch all record of Table A and matched record from table B
+ Right outer join
+  Table-A right outer Table-B
+ Self join :- Same Table
+ cross join :- all possible combinition
+------------------------------------------------------
+ select user.id,user.name,city.cityName,state.stateName,country.countryName
+ from user inner join city on user.cityId = city.id
+ inner join state on city.stateId = state.id
+ inner join country on state.countryId = country.id
+
+select user.id,user.name,city.cityName 
+from user left outer join city on user.cityId = city.id
+
+select user.id,user.name,city.cityName 
+from user right outer join city on user.cityId = city.id
+---------------------------------------------------------------------
+p-1000
+
+p1			p2			p3 		p4 ........................................p1000		
+wl               wl      
+
+product left outer join  watch-list
+user
+watch-list
+ userId,productId
+------------------------------------------------------------------------
+select count(*),cityId from user group by cityId 
+select count(*),city.cityName from user
+inner join city on user.cityId = city.id group by user.cityId
+
+
+
+
+
+
+  
 
 
 
