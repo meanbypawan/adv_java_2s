@@ -221,9 +221,17 @@ watch-list
 select count(*),cityId from user group by cityId 
 select count(*),city.cityName from user
 inner join city on user.cityId = city.id group by user.cityId
+-------------------------------------------------------------------------------
 
-
-
+Java-application<------JDBC------>Database
+Step to connect the database
+ 1. Add driver in library path [mysql -connector.jar]
+ 2. Load the Driver Class
+    mysql :-- class Driver implement java.sql.Driver{}
+    oracle :-  class OracleDriver implements java.sql.Driver{} 
+ 3. Establish database connection
+ 4. Execute database operation
+ 4. Close the connection
 
 
 
