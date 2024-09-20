@@ -232,15 +232,68 @@ Step to connect the database
  3. Establish database connection
  4. Execute database operation
  4. Close the connection
+----------------------------------------------
+Statement :-
+    1. Statement is used to execute non-parameterized sql query.
+    2. Statement st = con.createStatement();
+       st.execute(sql);
+       st.executeUpdate(sql)
+       st.executeQuery(sql)
+   3.  String sql = "insert into user..........";
+       while(i<=10){
+         st.executeUpdate(sql);
+         i++;
+       }
+       String id = sc.nextLine(); 
+  4.   String sql = "delete from user where id = "+id;
+       st.executeUpdate(sql);
+       
+       case :- 1   id = "1"
+               "delete from user where id = 1" ==> OK 
+       case :- 2   id = "1 or id != 1" 
+              "delete from user where id = 1 or id != 1"
+       SQL Injection                    
+PreparedStatement :-
+   PreparedStatement is used to execute parameterized sql query
+   2. PreparedStatement ps = con.prepareStatement(sql);
+      ps.execute();
+      ps.executeUpdate();
+      ps.executeQuery()
+  3.  String sql = "insert inot user ......."
+      while(i<=10){
+         ps.executeUpdate();
+         i++;
+      }
+------------------------------------------------------------
+Design Pattern 
+  MVC :-  (Model | View | Controller)
+                    Console | MainClass 
+-----------------------------------------------------------------
+Schema 													Java Application [Model]
+user(id,name,contact,age)-----------------------> class User{id,name,contact,age} 
+category(id,categoryName) --------------------> class Category{id,categoryName}
+product(id,title,brand,price)-------------------> class Product{}
+---------------------------------------
+  Modular Approach
+--------------------------------------
+Model :-  
+Why we create Model :--- to represent the data
 
-
-
+Database Context
+  We have to perform database operation on user table
+Java context
+  We have to perform database operation on user model
+  DAO [Data Access Object] | DTO [Data Transfer Object]  
   
-
-
-
-
-
+  Operation For User model
+   insert(), delete(), update(), fetch()
+  UserDAO
+  ProductDAO
+  CategoryDAO 
+   
+  
+  
+    
 
 
 
