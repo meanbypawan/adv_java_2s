@@ -1,5 +1,7 @@
 package model;
 
+// POJO :- Plain Old Java Object
+// Spring :- Dependency Injection
 public class User {
     private Integer id;
     private String name;
