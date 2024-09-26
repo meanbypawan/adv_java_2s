@@ -1,0 +1,23 @@
+Web Application
+  HTML :-
+   Hypertext Markup Language
+   Hypertext :-
+   Markup :- Tag
+   Tag :-
+   Paired  <div>----------------------</div>
+   Unpaired/Self closing <img/>, <input/>
+   
+   HTML Tag  : <tag>
+   HTML Element <tag>---------</tag> ==> 
+   ---------------------------------------------------------------
+   Block Level
+     div,p
+   Inline 
+     span,small,label,input,img
+   Formatting :-
+    b, i, u, sup, sub, strong, em
+      
+   
+   
+   
+   
