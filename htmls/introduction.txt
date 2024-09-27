@@ -1,0 +1,25 @@
+HTML :- HyperText Markup Language
+Tag Based :-
+-----------------------
+Block Level :-
+  div, p, heading related 
+Inline 
+  small, span, label, input, img...
+formatting tage :-
+  b, i, u, sup, sub, strong, em
+Heading :-
+  h1,h2,h3,h4,h5,h6
+Media :-
+  img, audio, video
+input fields:--
+   input [type="text"|"email"|"password"|"number"|"radio"|"checkbox"|"file"|"color"|"button"] 
+form :-
+ form     
+Button :-
+ button  
+Semantics :-
+  header, nav, footer, main, article, section...           
+Table :-
+ table, thead, tbody, tfoot, tr, th, td
+Link :-
+  a    
