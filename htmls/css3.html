@@ -1,0 +1,49 @@
+<html>
+    <head>
+     <!-- 
+        position :-
+         a. absolute :- move child element with respect to parent 
+         b. relative :- move from it's own position
+         c. sticky :- Scorlling
+         d. fixed :-   move according to viewport  
+     -->
+         <style>
+            .parent{
+                height: 100px;
+                border: 1px solid black;
+                position: relative;
+                top: 200px;
+            }
+            .parent div{
+                width:50px;
+                height: 50px;
+                border: 1px dashed red;
+                display: inline-block;
+                
+            }
+            .parent div:nth-child(3){
+              position: absolute;
+              top: 20px; 
+            }
+            .parent div:nth-child(5){
+                position: relative;
+                left: 20px;
+            }
+            .parent div:nth-child(1){
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                background-color: red;
+            }
+         </style>
+    </head>
+    <body>
+      <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </body>
+</html>
