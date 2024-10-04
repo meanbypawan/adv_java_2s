@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            .container{
+                border: 1px solid black;
+                height: 300px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .container div:nth-child(even), .container div:nth-child(odd){
+                width: 50px;
+                height: 50px;
+                color: white;
+            }
+            .container div:nth-child(even){
+                background-color: red;
+            }
+            .container div:nth-child(odd){
+                background-color: blue;
+            }
+            .container-2{
+                height: 200px;
+                border: 1px solid black;
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .container-2 div{
+                width: 150px;
+                height: 150px;
+                color: black;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container-2 div:nth-child(even){
+                background-color: red;
+            }
+            .container-2 div:nth-child(odd){
+                background-color: blue;
+            }
+            .container-2 div label{
+                width: 50px;
+                height: 50px;
+                background-color: white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+        <div class="container-2">
+            <div>
+                <label>1</label>
+            </div>
+            <div>
+                <label>2</label>
+            </div>
+            <div>
+                <label>3</label>
+            </div>
+        </div>
+    </body>
+</html>
