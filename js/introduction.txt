@@ -1,0 +1,105 @@
+Javascript :-
+  1. It is developed by brendan Eich
+  2. Javascript is client side as well as server side scripting languate 
+  3. Javascript is function oriented, object oriented multiparadigm
+     scripting language.
+     Paradigm :- Style of programming
+  4. Javascript is dynamically typed scripting language
+     c,c++,java :- Typed programming language
+     int x = 20;
+     float y = 20.5f;
+     boolean z = true;   
+     Javascript :-
+       x = 20;
+  6. Javascript is simple.
+  7. Javascript has capability to covert HTML into DHTML     
+  8. Javascript is SingleThreaded
+  9. Synchronous[Blocking] / Asynchronous Code [non-blocking]
+     s---1; --> 2min
+     s---2; --> 3 min
+     s---3; --> 
+     callback, promise, async - await
+  10. Javascript is Synchronous by default.
+     Angular, Reactjs
+     Typescript :- ES5 + ES6 (JS)
+     Javascript:- ReactJs is javacript library
+------------------------------------------------------
+We have to execute javacript client side/Browser.
+
+How to execute javacript on Browser
+Ans :- By writing js inside html document
+
+<html>
+  <head>
+  </head>
+  <body>
+  --
+  --
+  <script>
+    // Js Code
+  </script>
+  </body>
+</html>
+=======================>
+p1.html ======> DOM - Tree =====> Execute
+
+p1.c ----> C-compier, Os --> run
+p1.cpp----> Cpp-compiler, Os---> run
+p1.java ---> Java-compiler, JRE--> run
+Js-code---->Browser[Javascript Virtual Machine/Javascript Engine]
+ Ex :----- Chakra
+ ME------- Chakra core
+ GC ------ V8 engine
+ MF ------Spider Monkey
+--------------------------------------
+ DOM-Api-----> html document
+ console
+ setTimeout
+ setInterval
+ localStorage
+ sessionStorage
+ fetch
+  are not the part of javascript
+-----------------------------------
+DOM :- [document object model]
+  document ---- html document
+ <html>
+  <head>
+  </head>
+  <body>
+     <img src="logo.png" width="100px" height="100px" id="logo"/>
+  </body>
+</html>
+  document
+     |
+    html
+     |
+ ---------
+ |       |
+ head   body
+         |
+        img(src, width,height, id, alt, class, style...)    
+  
+-----------------------------------------------------------
+document :- It is built-in object provide by the browser api
+ HTMLDocument [document]
+ Spider-Monkey
+write(), writeln(),getElementById()
+getElementByClassName(), querySelector()
+createElement().............
+
+With the help of Only JS you can develop Single Page Web Application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
