@@ -1,0 +1,17 @@
+<script>
+    var x = [10,20,30,40,50];
+    /*
+    for(var i=0; i<x.length; i++)
+       document.write("<br>"+x[i]);
+    */
+   /*
+   for(var index in x)
+      document.write("<br>"+index+"  "+x[index]);
+  */
+   //x.push(1000);
+   //x.pop();
+   //x.unshift(10000);
+   x.splice(2,0,100,200,300);
+   for(var element of x)
+     document.write("<br>"+element);
+</script>
