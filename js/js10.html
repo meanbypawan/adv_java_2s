@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    small{
+        color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">  
+   <form>
+    <div class="form-group">
+      <input onkeyup="validateUsername()" id="username" type="text" placeholder="Enter username" class="form-control"/>
+      <small id="usernameError"></small>
+    </div>
+    <div class="form-group">
+        <button onclick="return validateForm()" type="submit" class="btn btn-danger">Submit</button>
+    </div>   
+   </form>
+   <script>
+     function validateUsername(){
+       var status = true;
+       var username =  document.getElementById("username").value;
+       var usernameError = document.getElementById("usernameError");
+       if(username.length == 0){
+        status = false;
+        usernameError.innerHTML = "Username is required";
+       }
+       else
+         usernameError.innerHTML = "";
+       return status;
+    }
+     function validateForm(){
+       var usernameStatus =   validateUsername();
+       if(usernameStatus)
+         return true;
+       return false;  
+    }
+   </script>
+  </div> 
+</body>
+</html>

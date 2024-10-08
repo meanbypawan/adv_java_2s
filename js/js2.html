@@ -1,13 +1,23 @@
-<script>
-    document.write("ABC<br>");
-    document.write("DEF<br>");
-    document.write("GHI");
-    document.write("<h1>Hello</h1>");
-    document.write(' "welcome" ');
-    document.write("<br> 'welcome' ");
-    document.write("<br><hr>");
-    document.writeln("AB");
-    document.writeln("CD");
-    document.writeln("EF<br>"); // ABCDEF
-    document.write("Addition = "+(20+10));
-</script>
+<html>
+    <body>
+       <center>
+         <img id="main" src="./images/first.jpeg" width="300px" height="150px"/>
+         <br>
+         <button onclick="incrementSize()">+</button>
+         <button onclick="decrementSize()">-</button>
+        </center> 
+        
+       <script>
+          function incrementSize(){
+             var obj = document.getElementById("main");
+             obj.width = obj.width + 20;
+             obj.height = obj.height + 20;
+           }
+          function decrementSize(){
+            var obj = document.getElementById("main");
+             obj.width = obj.width - 20;
+             obj.height = obj.height - 20;
+          }
+       </script>
+    </body>
+</html>

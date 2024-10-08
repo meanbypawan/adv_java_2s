@@ -1,0 +1,24 @@
+<html>
+    <body>
+       <center>
+         <img id="main" src="./images/first.jpeg" width="300px" height="150px"/>
+         <br>
+         <button onclick="changeSize(1)">+</button>
+         <button onclick="changeSize(0)">-</button>
+        </center> 
+       <script>
+        function changeSize(n){
+            var mainImage = document.getElementById("main");
+            if(n){
+                mainImage.width = mainImage.width +20;
+                mainImage.height = mainImage.height + 20;
+            }
+            else{
+                mainImage.width = mainImage.width - 20;
+                mainImage.height = mainImage.height - 20;
+                
+            }
+        }
+      </script>
+    </body>
+</html>
