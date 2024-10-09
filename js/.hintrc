@@ -9,6 +9,13 @@
         "image-alt": "off",
         "document-title": "off"
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off",
+        "label": "off"
+      }
     ]
   }
 }

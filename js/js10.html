@@ -20,10 +20,115 @@
       <small id="usernameError"></small>
     </div>
     <div class="form-group">
+      <label  onclick="togglePassword(this)" style="cursor: pointer;">Show</label>
+      <input onkeyup="validatePassword()" id="password" type="password" placeholder="Enter password" class="form-control"/>
+      <small id="passwordError"></small>
+    </div>
+    <div class="form-group">
+      <input onkeyup="validateMobile()" id="mobile" type="text" class="form-control" placeholder="Enter mobile"/>
+      <small id="mobileError"></small>
+    </div>
+    <div class="form-group">
+      <select onchange="validateQualification()" class="form-control" id="qualification">
+        <option value="0">select qualification</option>
+        <option value="DR">Doctorate</option>
+        <option value="PG">Post graduate</option>
+        <option value="GR">Graduate</option>
+        <option value="UG">Under graduate</option>
+      </select>
+      <small id="qualificationError"></small>
+    </div>
+    <div class="form-group">
+      <input onchange="validatePic()" type="file" class="form-control" id="pic"/>
+      <small id="picError"></small>
+    </div>
+    <div class="form-group">
         <button onclick="return validateForm()" type="submit" class="btn btn-danger">Submit</button>
     </div>   
    </form>
    <script>
+    function validatePic(){
+      var status = true;
+      var picObj = document.getElementById("pic");
+      var picError = document.getElementById("picError");
+      if(picObj.files[0]){
+          var fileName = picObj.files[0].name;
+          var dotIndex = fileName.lastIndexOf(".");
+          var fileExtension =  fileName.substring(dotIndex);
+          if(fileExtension != ".jpg"){
+            status = false;
+            picError.innerHTML = "Only jpg allowed";
+          }
+          else
+           picError.innerHTML = "";
+      }
+      else{
+        status = false;
+        picError.innerHTML = "upload profile pic";
+      }
+
+      return status;
+    }
+    function validateQualification(){
+      var status = true;
+      var qualification = document.querySelector("#qualification").value;
+      var qualificationError = document.getElementById("qualificationError");
+      if(qualification == "0"){
+        status = false;
+        qualificationError.innerHTML = "Select qualification";
+      }
+      else
+       qualificationError.innerHTML =  "";
+      return status;
+    }
+    function validateMobile(){
+      var status = true;
+      var mobile = document.getElementById("mobile").value;
+      var mobileError = document.getElementById("mobileError");
+      if(mobile.length == 0){
+        status=false;
+        mobileError.innerHTML = "Mobile is required";
+      }
+      else if(isNaN(mobile)){
+        status = false;
+        mobileError.innerHTML = "Only digits are allowed";
+      }
+      else if(mobile.length != 10){
+        status = false;
+        mobileError.innerHTML = 'Mobile number must have 10 digits';
+      }
+      else
+       mobileError.innerHTML = "";
+      return status;
+    }
+    function togglePassword(labelObj){
+      var labelText = labelObj.innerText;
+      var password = document.getElementById("password");
+      if(labelText == "Show"){
+         password.type = "text";
+         labelObj.innerText = "Hide";
+      }
+      else if(labelText == "Hide"){
+         password.type = "password";
+         labelObj.innerText = "Show";
+      }
+    }
+    function validatePassword(){
+      var status = true;
+      var password = document.getElementById("password").value;
+      var passwordError = document.getElementById("passwordError");
+      if(password.length == 0){
+        status = false;
+        passwordError.innerHTML = "Password is required";
+      }
+      else if(password.length < 6 || password.length > 10){
+        status = false;
+        passwordError.innerHTML = "password length must be b/w 6 to 10";
+      }
+      else 
+       passwordError.innerHTML = "";
+      return status;
+    }
      function validateUsername(){
        var status = true;
        var username =  document.getElementById("username").value;
@@ -38,7 +143,11 @@
     }
      function validateForm(){
        var usernameStatus =   validateUsername();
-       if(usernameStatus)
+       var passwordStatus = validatePassword();
+       var mobileStatus = validateMobile();
+       var qualificationStatus = validateQualification();
+       var picStatus = validatePic();
+       if(usernameStatus && passwordStatus && mobileStatus && qualificationStatus && picStatus)
          return true;
        return false;  
     }
