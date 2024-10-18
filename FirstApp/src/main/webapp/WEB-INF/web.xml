@@ -9,4 +9,14 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>DeleteProduct</display-name>
+    <servlet-name>DeleteProduct</servlet-name>
+    <servlet-class>p1.DeleteProduct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteProduct</servlet-name>
+    <url-pattern>/DeleteProduct</url-pattern>
+  </servlet-mapping>
 </web-app>

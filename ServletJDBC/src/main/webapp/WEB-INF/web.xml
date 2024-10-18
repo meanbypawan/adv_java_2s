@@ -4,6 +4,28 @@
   <welcome-file-list>
     <welcome-file>home.html</welcome-file>
   </welcome-file-list>
+  <context-param>
+    <param-name>GlobalMessage</param-name>
+    <param-value>Accessing Global Message From ServletContext</param-value>
+  </context-param>
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:mysql://localhost:3306/batch630?useSSL=false</param-value>
+  </context-param>
+  <context-param>
+    <param-name>username</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  
+  
   <servlet>
     <servlet-name>AddProductServlet</servlet-name>
     <servlet-class>p1.AddProductServlet</servlet-class>
@@ -11,5 +33,31 @@
   <servlet-mapping>
     <servlet-name>AddProductServlet</servlet-name>
     <url-pattern>/AddProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ViewProduct</servlet-name>
+    <servlet-class>p1.ViewProduct</servlet-class>
+    <init-param>
+      <param-name>message</param-name>
+      <param-value>Welcome in servlet</param-value>
+    </init-param>
+    <init-param>
+      <param-name>statusCode</param-name>
+      <param-value>P100048484</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewProduct</servlet-name>
+    <url-pattern>/ViewProduct</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteProduct</display-name>
+    <servlet-name>DeleteProduct</servlet-name>
+    <servlet-class>p1.DeleteProduct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteProduct</servlet-name>
+    <url-pattern>/DeleteProduct</url-pattern>
   </servlet-mapping>
 </web-app>

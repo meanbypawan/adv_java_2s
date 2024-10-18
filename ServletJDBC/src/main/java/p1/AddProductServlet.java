@@ -26,8 +26,8 @@ public class AddProductServlet extends HttpServlet {
 	   
 	   Product p = new Product(title, Float.parseFloat(price), brand);
 	   PrintWriter out = response.getWriter();
-	   if(ProductDAO.save(p))
-		   out.print("Product saved..");
+	   if(ProductDAO.save(p,getServletContext()))
+		   response.sendRedirect("home.html");
 	   else
 		   out.print("Something wrong....");
 	}

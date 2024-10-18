@@ -134,7 +134,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="DemoApp" path="/DemoApp" reloadable="true" source="org.eclipse.jst.jee.server:DemoApp"/><Context docBase="FirstApp" path="/FirstApp" reloadable="true" source="org.eclipse.jst.jee.server:FirstApp"/><Context docBase="TestServletApp" path="/TestServletApp" reloadable="true" source="org.eclipse.jst.jee.server:TestServletApp"/><Context docBase="TestHttpServlet" path="/TestHttpServlet" reloadable="true" source="org.eclipse.jst.jee.server:TestHttpServlet"/><Context docBase="ServletJDBC" path="/ServletJDBC" reloadable="true" source="org.eclipse.jst.jee.server:ServletJDBC"/></Host>
+      <Context docBase="DemoApp" path="/DemoApp" reloadable="true" source="org.eclipse.jst.jee.server:DemoApp"/><Context docBase="FirstApp" path="/FirstApp" reloadable="true" source="org.eclipse.jst.jee.server:FirstApp"/><Context docBase="TestServletApp" path="/TestServletApp" reloadable="true" source="org.eclipse.jst.jee.server:TestServletApp"/><Context docBase="TestHttpServlet" path="/TestHttpServlet" reloadable="true" source="org.eclipse.jst.jee.server:TestHttpServlet"/><Context docBase="ServletJDBC" path="/ServletJDBC" reloadable="true" source="org.eclipse.jst.jee.server:ServletJDBC"/><Context docBase="TestJSP" path="/TestJSP" reloadable="true" source="org.eclipse.jst.jee.server:TestJSP"/><Context docBase="ShopingApp" path="/ShopingApp" reloadable="true" source="org.eclipse.jst.jee.server:ShopingApp"/></Host>
     </Engine>
   </Service>
 </Server>
