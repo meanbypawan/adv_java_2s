@@ -1,0 +1,25 @@
+
+  JSON :- [Javascript Object Notation]
+  ---------------------------------------------------------
+  Web Application
+    |----FrontEnd [Client Application]
+    |----Server [BackendApplication]
+    
+    API [Application Programming Interface]
+    Client-Application<------------API-------------> Server-Application
+     																	API
+    Why we write API :-
+      Flipkart[Server Application] <----> Database/Storage
+      API-1, API-2...API-n
+      
+      |---- Android--> Java|Kotlin
+      |----- IOS   ---> Swift
+      |-----Browser--> Ruby																	
+      
+      
+      
+      
+      
+      
+      
+      
