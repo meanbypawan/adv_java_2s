@@ -306,7 +306,10 @@ create table product(
   availabilityStatus varchar(100),
   images varchar(1000),
   thumbnail varchar(255))   
-  
+  Review Table ;-
+  create table review(id int primary key auto_increment, rating int(2), comment
+ varchar(1000), date varchar(100), reviewerName varchar(100), reviewerEmail varchar(100)
+--------------------------------------------------
   
     
 
