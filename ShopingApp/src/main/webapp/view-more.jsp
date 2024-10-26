@@ -40,7 +40,9 @@
       <p><b>Discount : </b><label class="text-primary" style="font-weight: bold;"><%=p.getDiscountPercentage() %></label></p>
       <p><b>After discount : </b><label class="text-success" style="font-size:20px; font-weight:bold;"><%=(p.getPrice()-( p.getPrice() * p.getDiscountPercentage() )/100)%> Rs.</label></p>
       <div class="text-center">
-       <button class="btn btn-warning" style="width:100% !important;">Buy now</button>
+       <a href="place-order.jsp?productId=<%=p.getId()%>&billAmount=<%=(p.getPrice()-( p.getPrice() * p.getDiscountPercentage() )/100)%>">
+         <button class="btn btn-warning" style="width:100% !important;">Buy now</button>
+       </a>
       </div>
      </div>
    </div>

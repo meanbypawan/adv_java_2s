@@ -5,8 +5,12 @@
 <%
   if(request.getMethod().equals("POST")){
 	 User u = UserDAO.authenticateUser(user);
-     if(u!=null)
-    	 out.print("Sign in success....");
+     if(u!=null){
+    	 session.setAttribute("currentUserId",u.getId());
+    	 session.setAttribute("currentUserEmailId", u.getEmail());
+    	 session.setAttribute("isLoggedIn", true);
+    	 response.sendRedirect("../dashboard.jsp");
+     }
      else
     	 out.print("Sign in failed....");
   }
