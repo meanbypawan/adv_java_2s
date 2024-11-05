@@ -8,7 +8,6 @@
 <body>
    
    <%@include file="__header.jsp" %>
-   <%if(isLoggedIn!=null){ %>
    <div class="container mt-3">
      <form action="controller/place-order-action.jsp" method="post">
        <input type="hidden" name="productId" value=<%=request.getParameter("productId")%>>
@@ -31,8 +30,6 @@
        </div>
      </form>
    </div>
-   <%}else{
-	   response.sendRedirect("signin.jsp");
-   } %>
+   
 </body>
 </html>
